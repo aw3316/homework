@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var intervalId;
+    function rotateHandler() {
+        intervalId = setInterval(function() {
+            var firstImg = document.querySelector('img');
+            firstImg.parentNode.appendChild(firstImg);
+        }, 1000);
+    }
+    function stopHandler() {
+        clearInterval(intervalId);
+
+    }
+    function init() {
+        document.querySelector('#rotate').onclick = rotateHandler;
+        document.querySelector('#stop').onclick = stopHandler;
+    }
+
+    window.onload = init;
+    </script>
+    <style>
+        /* 브라우저 자체 여백 제거 */
+        * {
+            padding: 0;
+            margin:0; 
+        }
+
+        h1 {
+            text-align: center;
+            margin: 50px;
+        }
+        /* 버튼은 인라인 요소이다 - 자신의 영역을 가질수 없다. */  
+        button {
+            display: inline-block; /*인라인 특징을 갖는 블락요소가 된다 - 자신만의 영역을 가질수 있다.*/
+            width: 100px; 
+            height: 60px; 
+            margin: 30px; 
+            font-size: x-large;
+        }
+        /*이미지 태그는 인라인 요소이다. */
+        #images {
+            padding: 20px;
+        }
+        
+        img {
+            width: 200px;
+            display: block;
+            float: left; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1>rotation image</h1>
+    <hr>
+
+    <button id="rotate">회전</button>
+    <button id="stop">중지</button>    
+    <div id="images">
+        <img src="./images/Chrysanthemum.jpg"/>
+        <img src="./images/Desert.jpg"/>
+        <img src="./images/Hydrangeas.jpg"/>
+        <img src="./images/Jellyfish.jpg"/>
+        <img src="./images/Lighthouse.jpg"/>
+        <img src="./images/Penguins.jpg"/>
+        <img src="./images/Tulips.jpg"/>
+    </div> 
+  
+
+    
+    
+</body>
+</html>
