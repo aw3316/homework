@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getCircleCircumferenceArea(radius){ 
+            var result = -1;
+
+            if(radius <= 0) {
+              
+                throw new Error('원의 반지름은 0보다 큰 값이어야 합니다.');
+            
+            }
+            else { 
+            return 2 * radius * 3.141592;
+        }
+        return result; 
+    }
+        var radius = prompt('원의 반지름을 입력하세요.', 5);
+        radius = Number(radius);
+
+        try {
+            alert('원의 둘레는:' + getCircleCircumferenceArea(radius));
+        }
+        catch(e){
+            alert(e.message);
+        }        
+
+     
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

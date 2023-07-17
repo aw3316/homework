@@ -1,0 +1,29 @@
+<!--예외처리 파트 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    try {
+        alert('[1] 오류 발생 전');
+        alert('[2]' + (4 + num));
+        alert('[3] 오류 발생 후');
+    }
+    catch(e) {
+        alert('[4] 에러 처리');
+
+    }
+    finally {
+        alert('[5] finally 블럭');
+    }
+    
+        alert('[6] 에러 처리 후')
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <hr>
+</body>
+</html>
