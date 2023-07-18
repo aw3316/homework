@@ -1,0 +1,46 @@
+<!-- 사진 보기  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var person = {
+            name: '손흥민',
+            gender: '남자',
+            age: 31, 
+            field: ['축구','야구'],
+            friend: {
+            name: '손흥민',
+            gender: '남자',
+            age: 31, 
+            field: '축구'
+            }
+
+        };
+
+    function init() {
+        var jsonStr = document.querySelector('#jsonStr');
+        var jsonData= JSON.stringify(person)
+        jsonStr.innerHTML = jsonData; //문자열로 반환해줌
+        
+        var jsonObj = jsonData; 
+
+    }
+    window.onload = init();
+    </script>
+</head>
+<body>
+    <h1>JSON 예제</h1>
+    <hr>
+
+    <h4>JSON 문자열</h4>
+    <p id="jsonStr"></p>
+    
+    <h4>JSON 변환 객체</h4>
+    <p id="jsonObj"></p>
+    
+</body>
+</html>

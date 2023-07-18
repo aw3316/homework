@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var xhr = new XMLHttpRequest();
+    // xhr.open('GET','persons.csv', false) // false로 주면 동기방식으로 동작한다.  
+    // xhr.send(); // 서버로 부터 응답이 올떄까지 중지, 정상적 도착시 보여짐
+
+    function sendCsvHandler() {
+        var target = document.querySelector('#target');
+
+        xhr.open('GET','persons.csv', false);
+        xhr.send();
+
+        target.innerHTML = xhr.responseText;
+    }
+    function sendJsonHandler() {
+        var target = document.querySelector('#target');
+
+        xhr.open('GET','persons.json', false);
+        xhr.send();
+
+        target.innerHTML = xhr.responseText;
+    }
+
+    function init() {
+        document.querySelector('#sendCSV').addEventListener('click', sendCsvHandler);
+        document.querySelector('#sendJSON').addEventListener('click', sendJsonHandler);
+    }
+
+    window.onload = init;
+    
+</script>
+<style>
+    #target{
+        width: 500px;
+        height: 200px;
+        border: 2px solid gray;
+        padding: 20px;
+        margin: 20px;
+    }
+</style>
+<body>
+    <h1>AJAX Example1</h1>
+    <hr>
+
+    <button id="sendCSV">AJAX CSV!</button>
+    <button id="sendJSON">AJAX JSON!</button>
+    
+
+    <div id="target"></div>
+</body>
+</html>
