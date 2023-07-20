@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eval 함수와 JSON 파싱하기</title>
+</head>
+<body>
+    <script>
+        var data = '[\
+                 {"co": 0.6, "so2":0.006";}\
+        ]';
+        eval('var x = 30;') ; 
+
+        console.log(x);
+
+        eval("var ar = " + data + ";");
+        console.log(ar[0].co); // 0.6
+    </script>
+</body>
+</html>

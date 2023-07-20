@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서의 엘리먼트 객체 이용하기</title>
+
+    <script>
+        // 오류 발생하는 코드
+        function printResult() 
+        {
+    
+           
+             var x = prompt("x 값을 입력하세요", 0);
+             var y = prompt("y 값을 입력하세요", 0);
+            
+             x = parseInt(x);                        
+             y = parseInt(y);
+             btnPrint.value = x+y;
+
+            // alert(x+y);
+            // btnPrint.value = x+y;
+            // span1.innerText = x+y;
+            // btnPrint.type = "text"
+        }
+        btnPrint.onclick = printResult;
+    </script>
+    </head>
+    <body>
+    
+        <input type=" button" value = "출력" id = "btnPrint"/><br/> 
+        <!-- onclick="printResult();" -->
+        <span id="span1" onclick="alert('hello');">스펜입니다.</span>
+    
+</body>
+</html>

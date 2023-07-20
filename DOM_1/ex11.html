@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 가변 인자 arguments 콜렉션</title>
+</head>
+<body>
+    <script>
+        function add(x, y){ // 그릇아님, 참조하는 것일뿐
+           
+            // alert(arguments.length);
+            alert(typeof arguments[5]);
+            return x + y;
+        }
+
+        document.write(add(16,4,5,6,7,"hello"));
+    </script>
+</body>
+</html>

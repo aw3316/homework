@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 파서를 이용한 파싱</title>
+
+
+</head>
+<body>
+<script>
+    // JSON parser
+    
+    
+    var data = JSON.parse('{"id": 1, "title": "aaa"}');
+    // var data = {"n id": 1, title: "aaa"};
+    
+    console.log(data.title);
+    // console.log(data["n id"]);
+
+    var data2 = {id:2, title:"bbb"};
+    
+    var json = JSON.stringify(data2)
+    alert(json)
+
+</script>    
+</body>
+</html>

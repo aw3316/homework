@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코드 초기화와 엘리먼트 객체 선택하기</title>
+
+    <script>
+   
+        function printResult() 
+        {
+    
+             var btnPrint = document.getElementById("btn-print");
+             
+             var x = prompt("x 값을 입력하세요", 0);
+             var y = prompt("y 값을 입력하세요", 0);
+            
+             x = parseInt(x);                        
+             y = parseInt(y);
+             btnPrint.value = x+y;
+
+        }
+             
+        function init() {
+            var btnPrint = document.getElementById("btn-print");
+            btnPrint.onclick = printResult;
+
+        }
+        window.onload = init;
+        
+       
+    </script>
+    </head>
+    <body>
+    
+        <input type=" button" value = "클릭" id = "btn-print"/><br/> 
+        <!-- onclick="printResult();" -->
+        <span id="span1">스펜입니다.</span>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 플랫봄을 이용한 대화 parseInt, alert, prompt, cmfirm</title>
+</head>
+<body>
+    <script>
+        /*
+            window.location      // 
+            window.history       // 뒤로가기 
+            window.document      // 
+
+            alert()               // 창이 뜬다.
+            comfirm()             //
+            prompt()              // 값을 입력받기 위한 대화상자가 뜬다
+
+
+        */
+
+        var x = prompt("x의 값을 입력하세요", 0);    // 문자열
+        var y = prompt("y의 값을 입력하세요", 0);
+
+        x = parseInt(x);                         // 정수형으로 바꿔줌 
+        y = parseInt(y);
+
+        alert(x + y);
+
+
+        //////////////////////////////////////////
+
+        var answer;
+        answer = confirm("정말로 삭제하시겠습니까?");
+        if(answer)
+            alert("삭제되었습니다.");
+
+        
+        // parseInt("abc");      // Returns NaN
+        // parseInt("12abc");    // Returns 12
+        
+    </script>
+</body>
+</html>
