@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 객체 구조 분해
+        var sandwich = {
+            bread: '더치 크런치',
+            meat: '참치',
+            cheese: '스위스',
+            toppings: ['상추', '토마토', '머스타드']
+        }
+
+        
+    
+    var {bread, cheese} = sandwich;  // 변수 
+
+    console.log(bread, cheese);
+
+    bread = '마늘빵';
+    cheese = '파마산';
+    
+    console.log(bread, cheese);
+    console.log(sandwich.bread, sandwich.cheese);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
